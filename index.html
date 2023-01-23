@@ -2,14 +2,13 @@
 <html>
   <head>
     <title>My Iframe Page</title>
-    <style>
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
+    <script>
+        function autoResize() {
+            var iframe = document.getElementById("myIframe");
+            iframe.style.height = (iframe.contentWindow.document.body.scrollHeight) + 'px';
+        }
+    </script>
   </head>
-  <body>
-    <iframe src="https://www.appsheet.com/preview/a9dddcdc-2947-4bd1-917b-9872fe10d450"></iframe>
+  <body onload="autoResize();">
+    <iframe src="https://www.appsheet.com/preview/a9dddcdc-2947-4bd1-917b-9872fe10d450" id="myIframe" onload="autoResize();"></iframe>
   </body>
-</html>
