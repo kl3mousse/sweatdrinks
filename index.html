@@ -7,6 +7,14 @@
             var iframe = document.getElementById("myIframe");
             iframe.style.height = (iframe.contentWindow.document.body.scrollHeight) + 'px';
         }
+
+        function setBodyHeight() {
+          document.body.style.height = window.innerHeight + "px";
+        }
+
+        window.onresize = setBodyHeight;
+        setBodyHeight();
+
     </script>
   </head>
   <body onload="autoResize();">
